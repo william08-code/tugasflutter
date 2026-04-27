@@ -18,7 +18,7 @@ class _ListProfileState extends State<ListProfile> {
       int lastIndex = profiles.length;
       profiles.add(
         Profile(
-          id: lastIndex + 1,
+          id25: lastIndex + 1,
           name: "ell ${lastIndex + 1}",
           bio: "Flutter Developer",
           description:
@@ -44,7 +44,7 @@ class _ListProfileState extends State<ListProfile> {
           final profile = profiles[index];
 
           return Dismissible(
-            key: Key(profile.id.toString()),
+            key: Key(profile.id25.toString()),
             onDismissed: (direction) {
               final deletedItem = profiles[index];
               deleteitem(index);
@@ -55,7 +55,7 @@ class _ListProfileState extends State<ListProfile> {
             child: ListTile(
               leading: CircleAvatar(
                 backgroundImage: NetworkImage(
-                  'https://i.pravatar.cc/150?img=${profile.id}', // FOTO BEDA
+                  'https://i.pravatar.cc/150?img=${profile.id25}', // FOTO BEDA
                 ),
               ),
               title: Text(profile.name),
